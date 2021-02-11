@@ -1,7 +1,7 @@
 #data analyze
 
 from csv import reader
-from statistics import mean
+from statistics import median
 
 #Perform our analysis
 #We will find the average of our tempurature readings
@@ -12,4 +12,4 @@ with open("data.txt",'r') as data_file:
     for row in csv_reader:
         total.append(int(row[1]))
 
-print("Average tempurature readings :", mean(total))
+print("Average tempurature readings :", median(total))
